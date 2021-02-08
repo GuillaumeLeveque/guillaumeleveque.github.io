@@ -14,16 +14,38 @@
   <fieldset>
     <legend>Ta séance du jour</legend>
       <input id="nom" placeholder="Nom de l'exercice" au      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>
-
-  
   </fieldset>
+  <script>
+function chargeArray(){ //temps moyen 3,500 secondes
+        //créer un chronomètre
+        var mydiv = "mydiv01".getElt(); //retourne l'élément HTLM <div> ayant comme id "mydiv"
+        var myconfig = { //variable de configuration
+                ancrage: mydiv, //valeur par défaut false pour insérer à l'emplacement du script
+                append: "appendChild", // valeur par défaut - "insertAfter" - "appendChild" - "insertBefore"
+                fin: ""
+        };
+        var mychrono1 = true.setChrono(myconfig); //myconfig est un paramètre optionnel
+        mychrono1.cnxDataset.startChrono = new Date();
+
+        var arr1 = new Array;
+        //charge un Array
+        for(var x=0; x<=50000000; x++){ //50 millions d'entrée
+                arr1.push(x);
+        };
+
+        mychrono1.chronoAffiche(); //affiche le temps dexécution du programme
+        alert(arr1.length); //taille du tableau, nombre d'éléments
+};
+</script> 
   <fieldset>
   	<legend>Ma séance du jour</legend>
   	<printf>200 pompes </printf><input type="checkbox"> <br><br>
   	<printf>200 abdos</printf><input type="checkbox"> <br><br>
   	<printf>Curl concentration 12*3 pour chaque bras  </printf><input type="checkbox"> <br><br>
-  	<printf>Curl en rotation 24*3 pour chaque bras </printf><input id="nom" placeholder="Nombre de minutes" au      <input id="nom" placeholder="Nombre de minutes" autofocus="" required=""><printf>Minutes</printf>
+  	<printf>Curl en rotation 24*3 pour chaque bras <input type="checkbox"> <br><br> 
   	<printf>Curl en marteau 24*3 pour chaque bras </printf><input type="checkbox"> <br><br>
+  	<printf>Tu as fini ta séance en  </printf></printf><input id="nom" placeholder="Nombre de minutes" au      <input id="nom" placeholder="Nombre de minutes" autofocus="" required=""><printf>Minutes</printf>
+
 </fieldset>
 </form>
 </body>

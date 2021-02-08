@@ -1,0 +1,38 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
+  background-color: #0A0A2A;
+}
+
+p {
+  margin-top: 0px;
+}
+ 
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+ 
+
+input[type=checkbox] {
+  width: 10px;
+}
+ 
+
+h1 {
+   font-family:ravie;
+}

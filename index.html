@@ -1,52 +1,51 @@
 <!doctype html>
-<html lang="fr"
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+    <title>Séance de sport</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="style.css"> <!-- Resource style -->
-</head>
-<body>
-	<h1> <span>Séance de sport</span></h1>
-<form action="#">
-  <fieldset>
+  <body>
+    <fieldset>
     <legend>Ta séance du jour</legend>
-      <input id="nom" placeholder="Nom de l'exercice" au      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>      <input id="nom" placeholder="Nom de l'exercice" autofocus="" required=""> <input type="checkbox"> <br><br>
+      <input type="text" id="name" name="name"
+       minlength="0"  size="10"> <input type="checkbox"> <br><br>     <input type="text" id="name" name="name"
+       minlength="0"  size="10"><input type="checkbox"> <br><br><input type="text" id="name" name="name"
+       minlength="0"  size="10"><input type="checkbox"> <br><br><input type="text" id="name" name="name"
+       minlength="0"  size="10"><input type="checkbox"> <br><br> <input type="text" id="name" name="name"
+       minlength="0"  size="10"> <input type="checkbox"> <br><br> <input type="text" id="name" name="name"
+       minlength="0"  size="10"> <input type="checkbox"> <br><br> <input type="text" id="name" name="name"
+       minlength="0"  size="10"> <input type="checkbox"> <br><br> <input type="text" id="name" name="name"
+       minlength="0"  size="10"><input type="checkbox"> <br><br><input type="text" id="name" name="name"
+       minlength="0"  size="10"><input type="checkbox"> <br><br>
   </fieldset>
-  <script>
-function chargeArray(){ //temps moyen 3,500 secondes
-        //créer un chronomètre
-        var mydiv = "mydiv01".getElt(); //retourne l'élément HTLM <div> ayant comme id "mydiv"
-        var myconfig = { //variable de configuration
-                ancrage: mydiv, //valeur par défaut false pour insérer à l'emplacement du script
-                append: "appendChild", // valeur par défaut - "insertAfter" - "appendChild" - "insertBefore"
-                fin: ""
-        };
-        var mychrono1 = true.setChrono(myconfig); //myconfig est un paramètre optionnel
-        mychrono1.cnxDataset.startChrono = new Date();
+    <div class="container">
+      <h1 class="screen">
+        <span id="minutes">
+          00
+        </span>:<span id="seconds">
+          00
+        </span>:<span id="hundredths">
+          00
+        </span>
+      </h1>
+      <div class="buttons">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+      </div>
+    </div>
 
-        var arr1 = new Array;
-        //charge un Array
-        for(var x=0; x<=50000000; x++){ //50 millions d'entrée
-                arr1.push(x);
-        };
-
-        mychrono1.chronoAffiche(); //affiche le temps dexécution du programme
-        alert(arr1.length); //taille du tableau, nombre d'éléments
-};
-</script> 
-  <fieldset>
-  	<legend>Ma séance du jour</legend>
-  	<printf>200 pompes </printf><input type="checkbox"> <br><br>
-  	<printf>200 abdos</printf><input type="checkbox"> <br><br>
-  	<printf>Curl concentration 12*3 pour chaque bras  </printf><input type="checkbox"> <br><br>
-  	<printf>Curl en rotation 24*3 pour chaque bras <input type="checkbox"> <br><br> 
-  	<printf>Curl en marteau 24*3 pour chaque bras </printf><input type="checkbox"> <br><br>
-  	<printf>Tu as fini ta séance en  </printf></printf><input id="nom" placeholder="Nombre de minutes" au      <input id="nom" placeholder="Nombre de minutes" autofocus="" required=""><printf>Minutes</printf>
+    <script src="script.js"></script>
+    <fieldset>
+    <legend>Ma séance du jour</legend>
+    <printf>200 pompes </printf><input type="checkbox"> <br><br>
+    <printf>200 abdos</printf><input type="checkbox"> <br><br>
+    <printf>Curl concentration 12*3 pour chaque bras  </printf><input type="checkbox"> <br><br>
+    <printf>Curl en rotation 24*3 pour chaque bras <input type="checkbox"> <br><br> 
+    <printf>Curl en marteau 24*3 pour chaque bras </printf><input type="checkbox"> <br><br>
+    <printf>Tu as fini ta séance en  </printf> <input id="nom" placeholder="Nombre de minutes" autofocus=""><printf>Minutes</printf>
 
 </fieldset>
-</form>
-</body>
+  </body>
 </html>
